@@ -4,8 +4,11 @@ import string
 import time
 
 count = 0 
+
 def main():
+
     fileName = input("Please input file name ")
+    
     word = input("Please input the word you so desire to find: ")
 
     fileText = read_file(fileName)
