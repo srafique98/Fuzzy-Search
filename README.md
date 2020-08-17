@@ -73,17 +73,23 @@ def main():
 
 
 
-def returnnumShift(shifts,letter,word):         
+def returnnumShift(shifts,letter,word):   
+
     if letter in shifts:
+    
         return shifts.get(letter)
     else:
+    
         return len(word)
 
 
 
 def search(fileText, word,amountOfShifts):
+
     global count
+    
     i = len(word) -1
+    
     while (i <= len(fileText) -1):
         k = 0
 
@@ -130,41 +136,71 @@ def shiftTable(word):
 
 
 def checkKey(dict,key):
+
     if key in dict.keys():
+    
         return True
+        
     else:
+    
         return False
 
 def deletion(word):
+
     newWord = []
+    
     for index in range(len(word) + 1):
+    
         var = (word[0: index - 1] + word[index:len(word)])
+        
         newWord.append(var)
+        
     del(newWord[0])
+    
     return newWord
 
 def substitution(word):
+
     var = list(word)
+   
     newList = []
+    
     counter = 0
+    
     alpha = string.ascii_lowercase
+    
     for index in range(len(word)):
+    
         for char in alpha:
+        
             newWord = list(word)
+            
             if(newWord[index] != char):
+            
                 newWord[index] = char
+                
                 ''.join(newWord)
+                
                 newList.append(newWord)
+                
                 counter = counter + 1
+                
     return newList
 
 def insert(word):
+
     insertList = []
+    
     alpha = string.ascii_lowercase
+    
     for p in range(len(word) + 1):
+    
         for c in range(len(alpha)):
+        
             newWord = word[:p] + alpha[c] + word[p:]
+            
             insertList.append(newWord)
+            
     return insertList
 
 
