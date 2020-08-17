@@ -3,7 +3,7 @@
 import string
 import time
 
-count = 0               #I am counting amount of time the == operation executes inside my horspool algorithm
+count = 0 
 def main():
     fileName = input("Please input file name ")
     word = input("Please input the word you so desire to find: ")
@@ -73,7 +73,7 @@ def main():
 
 
 
-def returnnumShift(shifts,letter,word):              # shifts = dict     letter = letter that we looking for in dicts  word = word we looking for
+def returnnumShift(shifts,letter,word):         
     if letter in shifts:
         #print("its in dicts")
         return shifts.get(letter)
