@@ -75,7 +75,6 @@ def main():
 
 def returnnumShift(shifts,letter,word):         
     if letter in shifts:
-        #print("its in dicts")
         return shifts.get(letter)
     else:
         return len(word)
@@ -109,16 +108,13 @@ def swap(word):
 def read_file(filename):
     words = []
     bob = open(filename, "r")
-    text = bob.read()  # read whole file as string
-    # for line in text:
-    #     words.append(line.strip("\n"))
+    text = bob.read() 
 
     return text
 
 
 def shiftTable(word):
     lenght = len(word)
-   # print(lenght)
     cast = {}
     value = list(word)
     for index in range(len(word)):
