@@ -107,6 +107,7 @@ def search(fileText, word,amountOfShifts):
 
 
 def swap(word):
+
     s = []
     for index in range(len(word)-1):
         s.append(''.join((word[:index], word[index + 1], word[index + 1:index + 1], word[index], word[index + 1 + 1:])))
@@ -115,6 +116,7 @@ def swap(word):
 
 
 def read_file(filename):
+
     words = []
     bob = open(filename, "r")
     text = bob.read() 
@@ -123,6 +125,7 @@ def read_file(filename):
 
 
 def shiftTable(word):
+
     lenght = len(word)
     cast = {}
     value = list(word)
@@ -141,7 +144,6 @@ def shiftTable(word):
 def checkKey(dict,key):
 
     if key in dict.keys():
-    
         return True
         
     else:
